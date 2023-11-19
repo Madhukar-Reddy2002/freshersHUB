@@ -1,0 +1,70 @@
+<!-- views/allprofiles.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Profiles</title>
+  <link rel="stylesheet" href="/stylesheets/allprofiles.css">
+  <style>
+    /* Add your custom styles here if needed */
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/images/MSLogo.jpg" alt="MS">
+      </div>
+      <div class="nav-links">
+        <a href="/profile">My Profile</a>
+        <a href="/logout">Logout</a>
+      </div>
+      <button class="nav-toggle">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="profiles">
+      <% users.forEach(function(user) { %>
+
+        <div class="profile">
+          <div class="header">
+            <h2><%= user.username %></h2>
+          </div>
+          <p><b>Email:</b> <%= user.email %></p>
+          <p><b>Skills:</b>
+            <span class="skills">
+              <%= user.skills %>
+            </span>
+          </p>
+          <div class="buttons">
+            <button class="msg-btn">Message</button>
+            <button class="review-btn">
+              <a href="/addreview/<%= user._id %>">Add Review</a>
+            </button>
+          </div>
+        </div>
+
+      <% }); %>
+    </div>
+
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+
+</html>

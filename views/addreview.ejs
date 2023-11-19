@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review</title>
+    <style>
+        body {
+            background:linear-gradient(to bottom right, #fdc639, #ff7c60);
+            color: black;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content {
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin: 10px 0;
+        }
+
+        input[type="number"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+
+        .upbtn {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .bbtn {
+            position: absolute;
+            top: -20px;
+            left: 0%;
+            color: red;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .upbtn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <a href="/allprofiles" class="bbtn">🔙</a>
+            <h2 style="text-align: center;">Add Review</h2>
+            <form action="/addreview" method="post" onsubmit="return validateForm()">
+                <label for="rating">Rating:</label>
+                <input type="number" name="rating" min="1" max="5" required>
+                <input type="hidden" name="reviewto" value="<%= touser %>" >
+                <br>
+
+                <label for="comment">Comment:</label>
+                <textarea name="comment" rows="2" required></textarea>
+                <br>
+                <input type="submit" value="Submit Review">
+            </form>
+            
+        </div>
+    </div>
+    
+
+    <script>
+        function validateForm() {
+            // You can add more advanced validation logic here if needed
+            return true; // Return false to prevent the form submission
+        }
+    </script>
+</body>
+</html>

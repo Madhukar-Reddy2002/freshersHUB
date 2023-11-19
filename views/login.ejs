@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <title>Login page</title>
+  </head>
+
+  <body>
+    <section>
+      <div class="login-container">
+        <h2>LOGIN</h2>
+
+        <form action="/login" method="post">
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+
+            <input type="text" name="username" placeholder="UserName" class="detail" />
+            <label for="username">UserName</label>
+          </div>
+  
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+
+            <input type="password" name="password" placeholder="Password" class="detail" />
+            <label for="contraseña">Password</label>
+          </div>
+  
+          <div class="remember-forgot">
+            <label>
+              <input type="checkbox"> save Details
+            </label>
+  
+            <a href="#">forgot password</a>
+          </div>
+
+          <button type="submit">LOGIN</button>
+        </form>
+
+        <div class="create-account">
+            <a href="/">Create an account</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

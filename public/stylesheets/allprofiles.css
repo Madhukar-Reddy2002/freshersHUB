@@ -1,0 +1,134 @@
+/* allprofiles.css */
+
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to bottom right, #6889ff, #c668ff);
+  }
+  
+  header {
+	z-index: 99;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: #231E39;
+	color: white;
+	padding: 15px 20px;
+  }
+  
+  nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .logo img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+  }
+  
+  .nav-links {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .nav-links a {
+	color: white;
+	text-decoration: none;
+	margin-left: 20px;
+  }
+  
+  main {
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 20px;
+  }
+  
+  .profiles {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+  
+  .profile {
+	background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            padding: 20px;
+	width: 300px;
+	margin: 20px 10px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+	background: linear-gradient(to right, #5b7fff, #33ccfc);
+	border-radius: 8px 8px 0 0;
+	text-align: center;
+	color: white;
+	padding: 10px;
+  }
+  
+  .skills {
+	color: white;
+  }
+  
+  .buttons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+  }
+  
+  button {
+	background: #3498db;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 768px) {
+	.nav-links {
+	  display: none;
+	  flex-direction: column;
+	  position: absolute;
+	  top: 60px;
+	  left: 0;
+	  background: #231E39;
+	  padding: 10px;
+	  width: 100%;
+	  text-align: center;
+	}
+  
+	.nav-links.show {
+	  display: flex;
+	}
+  
+	.nav-links a {
+	  margin: 10px 0;
+	}
+  
+	.nav-toggle {
+	  display: block;
+	  background: none;
+	  border: none;
+	  color: white;
+	  font-size: 1.5em;
+	  cursor: pointer;
+	}
+  
+	.profiles {
+	  justify-content: center;
+	}
+  }
+  

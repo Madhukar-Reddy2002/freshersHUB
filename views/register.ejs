@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/register.css" />
+    <title>Crete an account</title>
+</head>
+
+<body>
+    <section>
+        <div class="login-container">
+            <h2>REGISTER</h2>
+            <form class="formbox" action="/register" method="post">
+                <input class="input-box" type="email" name="email" placeholder="Email" class="detail" />
+                <input class="input-box" type="text" name="username" placeholder="UserName" class="detail" />
+                <input class="input-box" type="password" name="password" placeholder="Password" class="detail" />
+                <input class="input-box" type="text" name="skills" placeholder="Skills (separated with ,)" class="detail" />
+
+                <button type="submit">REGISTER</button>
+            </form>
+
+            <div class="have-account">
+                <a href="/login">Already have an account</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
