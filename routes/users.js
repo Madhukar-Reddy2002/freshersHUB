@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose');
-mongoose.connect("mongodb://localhost:27017/freshershub");
+mongoose.connect(process.env.MONGO_URL);
 
 const UserSchema = new mongoose.Schema({
   username: {
