@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose');
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URL);
 
 const UserSchema = new mongoose.Schema({
   username: {

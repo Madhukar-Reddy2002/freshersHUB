@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URL);
 
 const ReviewSchema = new mongoose.Schema({
   reviewfrom: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
