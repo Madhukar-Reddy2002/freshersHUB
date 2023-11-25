@@ -1,4 +1,4 @@
-# FRESHERS HUB
+# Skills Matcher App
 
 This is a web application that allows users to create a profile, list their skills, and connect with other users based on complementary skills.
 
